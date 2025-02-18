@@ -91,3 +91,76 @@ img {
     border-radius: 10px;
     margin-bottom: 10px;
 }
+
+.upcoming-projects {
+    text-align: center;
+    margin-top: 50px;
+    padding: 30px;
+    background: #222;
+    border-radius: 10px;
+}
+
+.glitch {
+    font-size: 2rem;
+    font-weight: bold;
+    position: relative;
+    text-shadow: 2px 2px 0 #284a50, -2px -2px 0 #0d0d17;
+    animation: glitch 1s infinite alternate;
+}
+
+@keyframes glitch {
+    0% {
+        text-shadow: 2px 2px 0 #201d1d, -2px -2px 0 #222239;
+    }
+    50% {
+        text-shadow: -2px -2px 0 #280606, 2px 2px 0 #0000ff;
+    }
+    100% {
+        text-shadow: 2px -2px 0 #293742, -2px 2px 0 #3e1835;
+    }
+}
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #555;
+    width: 652px;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card p {
+    color: #bbb;
+}
+
+.glitch-box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    transform: skewX(-20deg);
+    animation: glitch-box-move 3s infinite linear;
+}
+
+@keyframes glitch-box-move {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200%;
+}

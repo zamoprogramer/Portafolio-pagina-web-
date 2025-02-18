@@ -6,6 +6,21 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
+    h1 {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    
+
 
 body {
     background-image: url('./imagenes/imagen.jpeg');
@@ -135,6 +150,7 @@ img {
     width: 652px;
     position: relative;
     overflow: hidden;
+    justify-content: center;
 }
 
 .project-card p {

@@ -1,0 +1,303 @@
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+/* Body */
+body {
+    background-image: url('./imagenes/imagen.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Typography */
+h1 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+/* Fade-in Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(2rem);
+    animation: fadeIn 1s ease-in forwards;
+    font-size: 2rem;
+}
+
+/* Container */
+.container {
+    max-width: 90%;
+    margin: auto;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 1rem;
+    box-shadow: 0px 0px 1rem rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Sections */
+.about, .bio, .projects {
+    margin-bottom: 3rem;
+}
+
+/* Profile Image */
+.profile-img {
+    width: 20rem;
+    height: auto;
+    border-radius: 40%;
+    margin-bottom: 1rem;
+    border: 0.3rem solid white;
+}
+
+img {
+    border-radius: 4rem;
+    border: 0.3rem solid white;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    color: white;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: 0.3s;
+}
+
+
+/* Contenedor de perfil */
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Imagen de perfil */
+.profile-img {
+    width: 12rem;
+    height: auto;
+    border-radius: 50%;
+    border: 0.3rem solid white;
+    margin-bottom: 1rem;
+}
+
+/* Contenedor de redes sociales */
+.social-links {
+    display: flex;
+    gap: 1rem; /* Espacio entre iconos */
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+/* Iconos de redes sociales */
+.social-links a img {
+    width: 4rem;
+    height: 4rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efecto hover en iconos */
+.social-links a img:hover {
+    transform: scale(1.2);
+}
+
+
+.btn:hover {
+    background-color: #0056b3;
+    font-size: 2.5rem;
+    width:auto;
+}
+
+/* Project Cards */
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 0.5rem rgba(255, 255, 255, 0.2);
+    width: 90%;
+    max-width: 40rem; /* Máximo de 40rem en móviles */
+    text-align: center;
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.project-card p {
+    color: #bbb;
+}
+
+.upcoming-projects {
+    position: relative; 
+    text-align: center;
+    margin-top: 5rem;
+    padding: 3rem;
+    background: #222;
+    border-radius: 1rem;
+    width: 90%;
+    max-width: 40rem;
+    margin: auto;
+    overflow: hidden; /* Evita que el glitch se extienda fuera de la caja */
+}
+
+/* Nueva caja interna donde aplicamos el glitch */
+.upcoming-glitch-box {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    transform: skewX(-20deg);
+    animation: glitch-box-move 3s infinite linear;
+}
+
+/* Animación Ajustada */
+@keyframes glitch-box-move {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+
+/* Glitch Effect */
+.glitch {
+    font-size: 4rem;
+    font-weight: bold;
+    position: relative;
+    text-shadow: 0.4rem 0.4rem 0 #284a50, -0.2rem -0.2rem 0 #0d0d17;
+    animation: glitch 1s infinite alternate;
+}
+
+/* Glitch Box Animation */
+.glitch-box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    transform: skewX(-20deg);
+    animation: glitch-box-move 3s infinite linear;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(2rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glitch-box-move {
+    0% { left: -50%; }
+    100% { left: 50%; }
+}
+
+@keyframes glitch {
+    0% {
+        text-shadow: 0.2rem 0.2rem 0 #201d1d, -0.2rem -0.2rem 0 #222239;
+    }
+    50% {
+        text-shadow: -0.2rem -0.2rem 0 #280606, 0.2rem 0.2rem 0 #0000ff;
+    }
+    100% {
+        text-shadow: 0.2rem -0.2rem 0 #293742, -0.2rem 0.2rem 0 #3e1835;
+    }
+}
+
+
+@media (min-width: 60rem) {
+    .container {
+        max-width: 70%;
+        padding: 3rem;
+    }
+
+    .projects {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        width: 100%;
+        margin-top: 2rem; 
+        position: relative; 
+    }
+    
+    .project-card {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 1.5rem;
+        border-radius: 1rem;
+        box-shadow: 0px 0px 0.5rem rgba(255, 255, 255, 0.2);
+        width: 100%;
+        max-width: 60rem;
+        text-align: center;
+        margin-bottom: 2rem; 
+        position: relative; 
+    }
+    
+
+    .upcoming-projects {
+        max-width: 50%; 
+    }
+}
+
+/* Desktop (min-width: 1024px) */
+@media (min-width: 102.4rem) {
+    .container {
+        max-width: 60%;
+    }
+
+    .projects {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: space-between;
+    }
+
+    .project-card {
+        width: 48%; 
+    }
+
+    .upcoming-projects {
+        max-width: 50%;
+    }
+}
